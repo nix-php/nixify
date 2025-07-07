@@ -1,9 +1,9 @@
 # Nixify
 
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/ghostwriter?label=Sponsor+@ghostwriter/nixify&logo=GitHub+Sponsors)](https://github.com/sponsors/ghostwriter)
-[![Automation](https://github.com/ghostwriter/nixify/actions/workflows/automation.yml/badge.svg)](https://github.com/ghostwriter/nixify/actions/workflows/automation.yml)
-[![Supported PHP Version](https://badgen.net/packagist/php/ghostwriter/nixify?color=8892bf)](https://www.php.net/supported-versions)
-[![Downloads](https://badgen.net/packagist/dt/ghostwriter/nixify?color=blue)](https://packagist.org/packages/ghostwriter/nixify)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/ghostwriter?label=Sponsor+@nix-php/nixify&logo=GitHub+Sponsors)](https://github.com/sponsors/ghostwriter)
+[![Automation](https://github.com/nix-php/nixify/actions/workflows/automation.yml/badge.svg)](https://github.com/nix-php/nixify/actions/workflows/automation.yml)
+[![Supported PHP Version](https://badgen.net/packagist/php/nix-php/nixify?color=8892bf)](https://www.php.net/supported-versions)
+[![Downloads](https://badgen.net/packagist/dt/nix-php/nixify?color=blue)](https://packagist.org/packages/nix-php/nixify)
 
 work in progress
 
