@@ -19,9 +19,9 @@ Fork the project on GitHub and check out your copy locally.
 ## Step 2: Clone the repository
 
 ```bash
-git clone git@github.com:ghostwriter/nixify.git
-cd nixify
-git remote add upstream git://github.com/ghostwriter/nixify.git
+git clone git@github.com:nix-php/nixify.git
+cd nix-php/nixify
+git remote add upstream git://github.com/nix-php/nixify.git
 ```
 
 # Step 3: Branch
