@@ -1,5 +1,5 @@
 {
-    "name": "nix/nixify",
+    "name": "nix-php/nixify",
     "description": "Nix tool for PHP",
     "license": "BSD-4-Clause",
     "type": "project",
@@ -16,12 +16,12 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/ghostwriter/nixify",
+    "homepage": "https://github.com/nix-php/nixify",
     "support": {
-        "issues": "https://github.com/ghostwriter/nixify/issues",
-        "source": "https://github.com/ghostwriter/nixify",
-        "rss": "https://github.com/ghostwriter/nixify/releases.atom",
-        "security": "https://github.com/ghostwriter/nixify/security/advisories/new"
+        "issues": "https://github.com/nix-php/nixify/issues",
+        "source": "https://github.com/nix-php/nixify",
+        "rss": "https://github.com/nix-php/nixify/releases.atom",
+        "security": "https://github.com/nix-php/nixify/security/advisories/new"
     },
     "funding": [
         {
@@ -66,8 +66,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Nix\\Nixify\\": "src",
-            "Ghostwriter\\Wip\\": "src"
+            "Nix\\Nixify\\": "src"
         }
     },
     "autoload-dev": {
