@@ -1,11 +1,12 @@
 {
-    "name": "ghostwriter/wip",
-    "description": "Here be dragons",
+    "name": "nix/nixify",
+    "description": "Nix tool for PHP",
     "license": "BSD-4-Clause",
-    "type": "library",
+    "type": "project",
     "keywords": [
         "ghostwriter",
-        "wip"
+        "nixify",
+        "nix"
     ],
     "authors": [
         {
@@ -15,12 +16,12 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/ghostwriter/wip",
+    "homepage": "https://github.com/ghostwriter/nixify",
     "support": {
-        "issues": "https://github.com/ghostwriter/wip/issues",
-        "source": "https://github.com/ghostwriter/wip",
-        "rss": "https://github.com/ghostwriter/wip/releases.atom",
-        "security": "https://github.com/ghostwriter/wip/security/advisories/new"
+        "issues": "https://github.com/ghostwriter/nixify/issues",
+        "source": "https://github.com/ghostwriter/nixify",
+        "rss": "https://github.com/ghostwriter/nixify/releases.atom",
+        "security": "https://github.com/ghostwriter/nixify/security/advisories/new"
     },
     "funding": [
         {
@@ -36,19 +37,20 @@
     ],
     "require": {
         "php": "~8.4.0",
-        "ghostwriter/case-converter": "~2.0.0 || ~2.1.0",
+        "ghostwriter/case-converter": "~2.1.0",
         "ghostwriter/clock": "~3.0.1",
         "ghostwriter/collection": "~2.0.0",
         "ghostwriter/config": "~1.0.0",
         "ghostwriter/container": "~5.0.1",
         "ghostwriter/event-dispatcher": "~5.0.3",
         "ghostwriter/filesystem": "~0.1.1",
-        "ghostwriter/http": "@dev",
         "ghostwriter/json": "~3.0.0",
         "ghostwriter/option": "~2.0.0",
         "ghostwriter/result": "~2.0.0",
         "ghostwriter/shell": "~0.1.0",
-        "ghostwriter/uuid": "~1.0.3"
+        "ghostwriter/uuid": "~1.0.3",
+        "nikic/php-parser": "~5.5.0",
+        "symfony/console": "~7.3.1"
     },
     "require-dev": {
         "ext-xdebug": "*",
@@ -57,18 +59,16 @@
         "infection/infection": "~0.30.2",
         "mockery/mockery": "~1.6.12",
         "phpunit/phpunit": "~12.2.6",
+        "symfony/var-dumper": "~7.3.1",
         "vimeo/psalm": "~6.12.1"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
+            "Nix\\Nixify\\": "src",
             "Ghostwriter\\Wip\\": "src"
-        },
-        "files": [
-            "src/constants.php",
-            "src/functions.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {
@@ -82,8 +82,8 @@
         ]
     },
     "bin": [
-        "bin/console",
-        "bin/console.php"
+        "bin/nixify",
+        "bin/nixify.php"
     ],
     "config": {
         "allow-plugins": {
