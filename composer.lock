@@ -3551,12 +3551,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/psr-phpunit-assertions.git",
-                "reference": "5e6b626a3b82d4b88ba55e5748b3f72734c0afc5"
+                "reference": "5744ee26ae0be8d23cf6a98107d59a38ce27cdc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/psr-phpunit-assertions/zipball/5e6b626a3b82d4b88ba55e5748b3f72734c0afc5",
-                "reference": "5e6b626a3b82d4b88ba55e5748b3f72734c0afc5",
+                "url": "https://api.github.com/repos/ghostwriter/psr-phpunit-assertions/zipball/5744ee26ae0be8d23cf6a98107d59a38ce27cdc0",
+                "reference": "5744ee26ae0be8d23cf6a98107d59a38ce27cdc0",
                 "shasum": ""
             },
             "require": {
@@ -3580,7 +3580,7 @@
                 "ghostwriter/coding-standard": "dev-main",
                 "infection/infection": "~0.31.0",
                 "mockery/mockery": "~1.6.12",
-                "phpunit/phpunit": "~12.2.8",
+                "phpunit/phpunit": "~12.2.9",
                 "symfony/var-dumper": "~7.3.1",
                 "vimeo/psalm": "~6.13.0"
             },
@@ -3636,7 +3636,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-30T11:31:42+00:00"
+            "time": "2025-07-31T08:04:50+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
