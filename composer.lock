@@ -3400,12 +3400,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "fc3b92cddc65c83563433d7b9e874dccfa3021c9"
+                "reference": "699de3a53b90a0e003dfa09275083ebd0d0d3733"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/fc3b92cddc65c83563433d7b9e874dccfa3021c9",
-                "reference": "fc3b92cddc65c83563433d7b9e874dccfa3021c9",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/699de3a53b90a0e003dfa09275083ebd0d0d3733",
+                "reference": "699de3a53b90a0e003dfa09275083ebd0d0d3733",
                 "shasum": ""
             },
             "require": {
@@ -3551,7 +3551,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-01T10:57:31+00:00"
+            "time": "2025-08-04T10:30:02+00:00"
         },
         {
             "name": "ghostwriter/psr-phpunit-assertions",
@@ -3559,12 +3559,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/psr-phpunit-assertions.git",
-                "reference": "79b2b463a28e50729217aa8137db82aa4b9bee24"
+                "reference": "533bc144337ee8295ddbfe678e31497e875ca773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/psr-phpunit-assertions/zipball/79b2b463a28e50729217aa8137db82aa4b9bee24",
-                "reference": "79b2b463a28e50729217aa8137db82aa4b9bee24",
+                "url": "https://api.github.com/repos/ghostwriter/psr-phpunit-assertions/zipball/533bc144337ee8295ddbfe678e31497e875ca773",
+                "reference": "533bc144337ee8295ddbfe678e31497e875ca773",
                 "shasum": ""
             },
             "require": {
@@ -3586,7 +3586,7 @@
             "require-dev": {
                 "ext-xdebug": "*",
                 "ghostwriter/coding-standard": "dev-main",
-                "infection/infection": "~0.31.0",
+                "infection/infection": "~0.31.1",
                 "mockery/mockery": "~1.6.12",
                 "phpunit/phpunit": "~12.3.0",
                 "symfony/var-dumper": "~7.3.2",
@@ -3644,7 +3644,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-04T09:46:04+00:00"
+            "time": "2025-08-04T11:50:37+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
