@@ -3,7 +3,6 @@
   "description": "[WIP] Nix tool for PHP"
   "homepage": "https://github.com/nix-php/nixify"
   "topics": "ghostwriter, nix, nix-php, nixify"
-  "private": false
   "has_issues": true
   "has_projects": false
   "has_wiki": false
