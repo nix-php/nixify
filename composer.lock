@@ -3470,12 +3470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/psr-phpunit-assertions.git",
-                "reference": "5dcab92e08ba692b41de11dd0ee65cc2dc140d0e"
+                "reference": "e425356122c2c86e74991fed7aa142f6f5ccc483"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/psr-phpunit-assertions/zipball/5dcab92e08ba692b41de11dd0ee65cc2dc140d0e",
-                "reference": "5dcab92e08ba692b41de11dd0ee65cc2dc140d0e",
+                "url": "https://api.github.com/repos/ghostwriter/psr-phpunit-assertions/zipball/e425356122c2c86e74991fed7aa142f6f5ccc483",
+                "reference": "e425356122c2c86e74991fed7aa142f6f5ccc483",
                 "shasum": ""
             },
             "require": {
@@ -3554,7 +3554,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-09T21:21:10+00:00"
+            "time": "2025-08-09T23:32:32+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
