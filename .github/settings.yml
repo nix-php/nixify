@@ -6,24 +6,24 @@
     "description": "Major release – targeting 1.0.x branch (semantic version: 1.0.0)"
     "state": "open"
 "repository":
+  "name": "nixify"
+  "description": "[WIP] Nix tool for PHP"
+  "topics": "ghostwriter, nix, nix-php, nixify"
+  "homepage": "https://github.com/nix-php/nixify"
+  "default_branch": "0.1.x"
+  "allow_auto_merge": true
+  "allow_forking": true
   "allow_merge_commit": true
   "allow_rebase_merge": true
   "allow_squash_merge": true
-  "default_branch": "0.1.x"
+  "allow_update_branch": true
   "delete_branch_on_merge": true
-  "description": "[WIP] Nix tool for PHP"
   "enable_automated_security_fixes": true
   "enable_vulnerability_alerts": true
   "has_downloads": true
   "has_issues": true
   "has_projects": false
   "has_wiki": false
-  "homepage": "https://github.com/nix-php/nixify"
-  "name": "nixify"
-  "topics": "ghostwriter, nix, nix-php, nixify"
-  "allow_auto_merge": true
-  "allow_forking": true
-  "allow_update_branch": true
   "security_and_analysis":
     "advanced_security":
       "status": "enabled"
