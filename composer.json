@@ -1,5 +1,5 @@
 {
-    "name": "nix-php/nixify",
+    "name": "ghostwriter/nixify",
     "description": "Nix tool for PHP",
     "license": "BSD-4-Clause",
     "type": "project",
@@ -63,7 +63,14 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Nix\\Nixify\\": "src"
+            "Ghostwriter\\Nixify\\": "src"
+        }
+    },
+    "extra": {
+        "ghostwriter": {
+            "container": {
+                "provider": "Ghostwriter\\Nixify\\Container\\NixifyServiceProvider"
+            }
         }
     },
     "autoload-dev": {
@@ -77,10 +84,7 @@
             "tests/Fixture/"
         ]
     },
-    "bin": [
-        "bin/nixify",
-        "bin/nixify.php"
-    ],
+    "bin": "bin/nixify",
     "config": {
         "allow-plugins": {
             "ghostwriter/coding-standard": true
