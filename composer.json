@@ -66,13 +66,6 @@
             "Ghostwriter\\Nixify\\": "src"
         }
     },
-    "extra": {
-        "ghostwriter": {
-            "container": {
-                "provider": "Ghostwriter\\Nixify\\Container\\NixifyServiceProvider"
-            }
-        }
-    },
     "autoload-dev": {
         "psr-4": {
             "Tests\\Unit\\": "tests/Unit/"
@@ -102,6 +95,13 @@
         "process-timeout": 5000,
         "sort-packages": true,
         "use-parent-dir": false
+    },
+    "extra": {
+        "ghostwriter": {
+            "container": {
+                "provider": "Ghostwriter\\Nixify\\Container\\NixifyServiceProvider"
+            }
+        }
     },
     "scripts": {
         "cache:clear": "rm -rf ./.cache/*",
