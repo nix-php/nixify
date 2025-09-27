@@ -51,7 +51,7 @@
         "ghostwriter/shell": "^0.1.0",
         "ghostwriter/uuid": "^1.0.3",
         "nikic/php-parser": "^5.6.1",
-        "symfony/console": "^7.3.3"
+        "symfony/console": "^7.3.4"
     },
     "require-dev": {
         "ext-xdebug": "*",
