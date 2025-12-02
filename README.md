@@ -5,11 +5,7 @@
 [![Supported PHP Version](https://badgen.net/packagist/php/nix-php/nixify?color=8892bf)](https://www.php.net/supported-versions)
 [![Downloads](https://badgen.net/packagist/dt/nix-php/nixify?color=blue)](https://packagist.org/packages/nix-php/nixify)
 
-work in progress
-
-> [!WARNING]
->
-> This project is not finished yet, work in progress.
+Nix tool for PHP projects.
 
 ## Installation
 
@@ -27,6 +23,36 @@ You can also star (🌟) this repo to find it easier later.
 
 ```php
 vendor/bin/nixify
+```
+
+Generates a `default.nix` file for the project.
+
+```php
+vendor/bin/nixify make:default-nix
+```
+
+Generates a `flake.nix` file for the project.
+
+```php
+vendor/bin/nixify make:flake-nix
+```
+
+Generates a `shell.nix` file for the project.
+
+```php
+vendor/bin/nixify make:shell-nix
+```
+
+Locks Nix dependencies to latest versions.
+
+```php
+vendor/bin/nixify lock
+```
+
+Updates Nix files to the latest version.
+
+```php
+vendor/bin/nixify update
 ```
 
 ### Credits

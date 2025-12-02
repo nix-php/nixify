@@ -2,6 +2,11 @@
 
 declare(strict_types=1);
 
+use Ghostwriter\Nixify\Console\Command\LockCommand;
+use Ghostwriter\Nixify\Console\Command\MakeDefaultNixCommand;
+use Ghostwriter\Nixify\Console\Command\MakeFlakeNixCommand;
+use Ghostwriter\Nixify\Console\Command\MakeShellNixCommand;
+use Ghostwriter\Nixify\Console\Command\UpdateCommand;
 use Symfony\Component\Console\Command\Command;
 
 /**
@@ -21,8 +26,14 @@ return [
     'package' => 'ghostwriter/nixify',
     'auto_exit'       => false,
     'single_command'       => false,
-    'default_command'  => 'list',
+    'default_command'  => 'update',
     'catch_errors'     => true,
     'catch_exceptions' => true,
-    'commands' => [],
+    'commands' => [
+        'lock'             => LockCommand::class,
+        'make:default-nix' => MakeDefaultNixCommand::class,
+        'make:flake-nix'   => MakeFlakeNixCommand::class,
+        'make:shell-nix'   => MakeShellNixCommand::class,
+        'update'           => UpdateCommand::class,
+    ],
 ];
