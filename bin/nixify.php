@@ -3,10 +3,10 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Wip\Console;
+namespace Ghostwriter\Nixify\Console;
 
 use ErrorException;
-use Ghostwriter\Wip\Foo;
+use Ghostwriter\Nixify\Nixify;
 
 use const DIRECTORY_SEPARATOR;
 use const STDERR;
@@ -31,10 +31,9 @@ use function set_error_handler;
 
     require $autoloader;
 
-    /**
-     * #BlackLivesMatter.
-     */
-    echo Foo::new()->test();
-
     restore_error_handler();
+
+    /** #BlackLivesMatter */
+    exit(Nixify::new()->run($_SERVER['argv'] ?? []));
+
 })($_composer_autoload_path ?? dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php');

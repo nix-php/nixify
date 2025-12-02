@@ -16,7 +16,7 @@ work in progress
 You can install the package via composer:
 
 ``` bash
-composer require ghostwriter/wip
+composer require ghostwriter/nixify
 ```
 
 ### Star ⭐️ this repo if you find it useful
@@ -26,13 +26,13 @@ You can also star (🌟) this repo to find it easier later.
 ## Usage
 
 ```php
-// work in progress
+vendor/bin/nixify
 ```
 
 ### Credits
 
 - [Nathanael Esayeas](https://github.com/ghostwriter)
-- [All Contributors](https://github.com/ghostwriter/wip/contributors)
+- [All Contributors](https://github.com/ghostwriter/nixify/contributors)
 
 ### Changelog
 
