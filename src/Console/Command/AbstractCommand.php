@@ -6,15 +6,14 @@ namespace Ghostwriter\Nixify\Console\Command;
 
 use Ghostwriter\Filesystem\Interface\FilesystemInterface;
 use InvalidArgumentException;
-use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\StyleInterface;
 use Symfony\Component\Process\Process;
+use Throwable;
 
 use function is_dir;
 use function sprintf;
@@ -28,17 +27,55 @@ abstract class AbstractCommand extends Command
         parent::__construct();
     }
 
-    public function process(
-        OutputInterface $output,
+    final protected function configure(): void
+    {
+        $this->addArgument(
+            name: 'workspace',
+            mode: InputArgument::OPTIONAL,
+            description: 'The path where the file will be created.',
+            default: $this->filesystem->currentWorkingDirectory(),
+        );
+
+        $this->addOption(
+            name: 'force',
+            shortcut: 'f',
+            mode: InputOption::VALUE_NONE,
+            description: 'Overwrite existing file.',
+        );
+    }
+
+    /** @throws Throwable */
+    final protected function force(InputInterface $input): bool
+    {
+        return $input->getOption('force') === true;
+    }
+
+    /** @throws Throwable */
+    final protected function input(string $command, bool $force, string $workspace): ArrayInput
+    {
+        $parameters = [
+            'command' => $command,
+            'workspace' => $workspace,
+        ];
+
+        if ($force) {
+            $parameters['--force'] = true;
+        }
+
+        return new ArrayInput($parameters);
+    }
+
+    final protected function process(
         array $command,
         string $workingDirectory,
         ?array $environmentVariables = null,
+        null|float|int $timeout = null,
     ): Process {
         $process = new Process(
             command: $command,
             cwd: $workingDirectory,
             env: $environmentVariables,
-            timeout: null,
+            timeout: $timeout,
         );
 
         $style = $this->style;
@@ -46,6 +83,7 @@ abstract class AbstractCommand extends Command
         $process->mustRun(static function ($type, string $buffer) use ($style): void {
             if (Process::ERR === $type) {
                 $style->error($buffer);
+
                 return;
             }
             $style->info($buffer);
@@ -56,45 +94,8 @@ abstract class AbstractCommand extends Command
         return $process;
     }
 
-    public function runCommand(
-        string $command,
-        Application $application,
-        string $workspace,
-        bool $force,
-        OutputInterface $output
-    ): int {
-        $parameters = [
-            'command' => $command,
-            'workspace' => $workspace,
-        ];
-
-        if ($force) {
-            $parameters['--force'] = true;
-        }
-
-        return $application->run(new ArrayInput($parameters), $output);
-    }
-
-    protected function configure(): void
-    {
-        parent::configure();
-
-        $this->addOption(
-            name: 'force',
-            shortcut: 'f',
-            mode: InputOption::VALUE_NONE,
-            description: 'Overwrite existing file.',
-        );
-
-        $this->addArgument(
-            name: 'workspace',
-            mode: InputArgument::OPTIONAL,
-            description: 'The path where the file will be created.',
-            default: $this->filesystem->currentWorkingDirectory(),
-        );
-    }
-
-    protected function workspace(InputInterface $input): string
+    /** @throws Throwable */
+    final protected function workspace(InputInterface $input): string
     {
         $workspace = $input->getArgument('workspace');
 

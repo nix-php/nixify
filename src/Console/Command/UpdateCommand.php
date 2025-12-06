@@ -29,15 +29,24 @@ final class UpdateCommand extends AbstractCommand
             throw new RuntimeException('Application instance is not available.');
         }
 
-        $workspace = $input->getArgument('workspace');
+        $commands = ['make:default-nix', 'make:shell-nix', 'make:flake-nix', 'lock'];
 
-        $force = $input->getOption('force');
+        $force = $this->force($input);
 
-        $this->runCommand('make:default-nix', $application, $workspace, $force, $output);
-        $this->runCommand('make:flake-nix', $application, $workspace, $force, $output);
-        $this->runCommand('make:shell-nix', $application, $workspace, $force, $output);
+        $workspace = $this->workspace($input);
 
-        $this->runCommand('lock', $application, $workspace, $force, $output);
+        foreach ($commands as $command) {
+            $exitCode = $application->run(
+                $this->input(command: $command, force: $force, workspace: $workspace),
+                $output
+            );
+
+            if (self::SUCCESS === $exitCode) {
+                continue;
+            }
+
+            return $exitCode;
+        }
 
         return self::SUCCESS;
     }

@@ -27,11 +27,12 @@ final class MakeDefaultNixCommand extends AbstractCommand
     {
         $output->writeln([$this->getName(), str_repeat('=', 12)]);
 
+        $force = $this->force($input);
         $workspace = $this->workspace($input);
 
         $path = $workspace . DIRECTORY_SEPARATOR . 'default.nix';
 
-        if ($this->filesystem->isFile($path)) {
+        if (! $force && $this->filesystem->isFile($path)) {
             $output->writeln(sprintf('<comment>skipped</comment> %s (file exists)', $path));
 
             return self::SUCCESS;

@@ -26,11 +26,13 @@ final class MakeFlakeNixCommand extends AbstractCommand
     public function execute(InputInterface $input, OutputInterface $output): int
     {
         $output->writeln([$this->getName(), str_repeat('=', 12)]);
+
+        $force = $this->force($input);
         $workspace = $this->workspace($input);
 
         $path = $workspace . DIRECTORY_SEPARATOR . 'flake.nix';
 
-        if ($this->filesystem->isFile($path)) {
+        if (! $force && $this->filesystem->isFile($path)) {
             $output->writeln(sprintf('<comment>skipped</comment> %s (file exists)', $path));
 
             return self::SUCCESS;
