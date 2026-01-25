@@ -2430,12 +2430,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "91c873c76d14f8b099fdd1530db7f93136380039"
+                "reference": "9bc242a401861477127dc9501ac135c8a117cadb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/91c873c76d14f8b099fdd1530db7f93136380039",
-                "reference": "91c873c76d14f8b099fdd1530db7f93136380039",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/9bc242a401861477127dc9501ac135c8a117cadb",
+                "reference": "9bc242a401861477127dc9501ac135c8a117cadb",
                 "shasum": ""
             },
             "require": {
@@ -2495,8 +2495,8 @@
                 "nikic/php-parser": "^5.7.0",
                 "php": "~8.4.0 || ~8.5.0",
                 "phpunit/phpunit": "^12.5.7",
-                "symfony/process": "^8.0.3",
-                "symfony/var-dumper": "^8.0.3"
+                "symfony/process": "^8.0.4",
+                "symfony/var-dumper": "^8.0.4"
             },
             "conflict": {
                 "pestphp/pest": "*"
@@ -2610,7 +2610,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-24T18:36:51+00:00"
+            "time": "2026-01-25T08:51:21+00:00"
         },
         {
             "name": "ghostwriter/github-cli",
