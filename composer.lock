@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56296285beaf90ec378f562b48c7315b",
+    "content-hash": "1236f5aaf4deca290dc1a13f76c609fe",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -1557,16 +1557,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v8.0.4",
+            "version": "v8.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "10df72602d88c0a3fa685b822976a052611dd607"
+                "reference": "b5f3aa6762e33fd95efbaa2ec4f4bc9fdd16d674"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/10df72602d88c0a3fa685b822976a052611dd607",
-                "reference": "10df72602d88c0a3fa685b822976a052611dd607",
+                "url": "https://api.github.com/repos/symfony/process/zipball/b5f3aa6762e33fd95efbaa2ec4f4bc9fdd16d674",
+                "reference": "b5f3aa6762e33fd95efbaa2ec4f4bc9fdd16d674",
                 "shasum": ""
             },
             "require": {
@@ -1598,7 +1598,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v8.0.4"
+                "source": "https://github.com/symfony/process/tree/v8.0.5"
             },
             "funding": [
                 {
@@ -1618,7 +1618,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-01-23T11:07:10+00:00"
+            "time": "2026-01-26T15:08:38+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -2430,12 +2430,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/coding-standard.git",
-                "reference": "46c1baf495c61e48e6a9df09e3142a0e3ac37707"
+                "reference": "52213b465f3522ba0d80300ff7817e267b439f85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/46c1baf495c61e48e6a9df09e3142a0e3ac37707",
-                "reference": "46c1baf495c61e48e6a9df09e3142a0e3ac37707",
+                "url": "https://api.github.com/repos/ghostwriter/coding-standard/zipball/52213b465f3522ba0d80300ff7817e267b439f85",
+                "reference": "52213b465f3522ba0d80300ff7817e267b439f85",
                 "shasum": ""
             },
             "require": {
@@ -2610,7 +2610,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-27T20:31:57+00:00"
+            "time": "2026-01-28T10:57:22+00:00"
         },
         {
             "name": "ghostwriter/github-cli",
