@@ -7,7 +7,7 @@
     "state": "open"
 "repository":
   "name": "nixify"
-  "description": "[WIP] Nix tool for PHP"
+  "description": "Nix tool for PHP"
   "topics": "ghostwriter, nix, nix-php, nixify"
   "homepage": "https://github.com/nix-php/nixify"
   "default_branch": "0.1.x"
