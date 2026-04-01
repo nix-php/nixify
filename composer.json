@@ -52,7 +52,7 @@
         "ghostwriter/shell": "^0.1.4",
         "ghostwriter/uuid": "^1.0.3",
         "nikic/php-parser": "^5.7.0",
-        "symfony/process": "^8.0.5"
+        "symfony/process": "^8.0.8"
     },
     "require-dev": {
         "ext-xdebug": "*",
