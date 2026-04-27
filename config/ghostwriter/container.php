@@ -2,32 +2,30 @@
 
 declare(strict_types=1);
 
-use Ghostwriter\Config\Interface\ConfigurationInterface;
-use Ghostwriter\Container\Interface\Service\DefinitionInterface;
 use Ghostwriter\Container\Interface\Service\ExtensionInterface;
 use Ghostwriter\Container\Interface\Service\FactoryInterface;
-use Ghostwriter\Nixify\Container\Ghostwriter\Config\ConfigurationExtension;
+use Ghostwriter\EventDispatcher\ListenerProvider;
+use Ghostwriter\Nixify\Container\Ghostwriter\EventDispatcher\ListenerProviderExtension;
+use Ghostwriter\Nixify\Container\Symfony\Console\ApplicationFactory;
+use Ghostwriter\Nixify\Interface\NixifyInterface;
+use Ghostwriter\Nixify\Nixify;
+use Symfony\Component\Console\Application;
 
 /**
  * @return array{
  *     'alias': array<class-string,class-string>,
- *     'define': array<class-string,class-string<DefinitionInterface>>,
  *     'extend': array<class-string,list<class-string<ExtensionInterface>>>,
  *     'factory': array<class-string,class-string<FactoryInterface>>
  * }
  */
 return [
     'alias' => [
-        // 'Some\Interface' => 'Some\Implementation',
-    ],
-    'define' => [
-        // 'Some\ServiceDefinition',
+        NixifyInterface::class => Nixify::class,
     ],
     'extend' => [
-        // 'Some\Service' => ['Some\ServiceExtension'],
-        ConfigurationInterface::class => [ConfigurationExtension::class],
+        ListenerProvider::class => [ListenerProviderExtension::class],
     ],
     'factory' => [
-        // 'Some\Service' => 'Some\ServiceFactory',
+        Application::class => ApplicationFactory::class,
     ],
 ];

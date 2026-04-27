@@ -95,7 +95,7 @@
     "extra": {
         "ghostwriter": {
             "container": {
-                "definition": "Ghostwriter\\Nixify\\Container\\NixifyDefinition"
+                "provider": ["Ghostwriter\\Nixify\\Container\\NixifyProvider"]
             }
         },
         "thanks": {
