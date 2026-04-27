@@ -41,11 +41,9 @@ final class UpdateCommand extends AbstractCommand
                 $output
             );
 
-            if (self::SUCCESS === $exitCode) {
-                continue;
+            if (self::SUCCESS !== $exitCode) {
+                return $exitCode;
             }
-
-            return $exitCode;
         }
 
         return self::SUCCESS;
