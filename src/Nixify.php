@@ -9,10 +9,9 @@ use Ghostwriter\Nixify\Interface\NixifyInterface;
 use Override;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
-use Symfony\Component\Console\Output\ConsoleOutput;
 use Throwable;
 
-/** @see FooTest */
+/** @see NixifyTest */
 final readonly class Nixify implements NixifyInterface
 {
     public function __construct(
@@ -25,9 +24,10 @@ final readonly class Nixify implements NixifyInterface
         return Container::getInstance()->get(self::class);
     }
 
+    /** @throws Throwable */
     #[Override]
     public function run(array $arguments = []): int
     {
-        return $this->application->run(new ArgvInput($arguments), new ConsoleOutput());
+        return $this->application->run(new ArgvInput($arguments));
     }
 }

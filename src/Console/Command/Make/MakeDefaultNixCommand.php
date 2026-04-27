@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Nixify\Console\Command;
+namespace Ghostwriter\Nixify\Console\Command\Make;
 
+use Ghostwriter\Nixify\Console\Command\AbstractCommand;
 use Override;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputInterface;
