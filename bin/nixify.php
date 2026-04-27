@@ -14,6 +14,7 @@ use const STDERR;
 use function dirname;
 use function file_exists;
 use function fwrite;
+use function implode;
 use function restore_error_handler;
 use function set_error_handler;
 
@@ -35,5 +36,6 @@ use function set_error_handler;
 
     /** #BlackLivesMatter */
     exit(Nixify::new()->run($_SERVER['argv'] ?? []));
-
-})($_composer_autoload_path ?? dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php');
+})(
+    $_composer_autoload_path ?? implode(DIRECTORY_SEPARATOR, [dirname(__DIR__), 'vendor', 'autoload.php'])
+);

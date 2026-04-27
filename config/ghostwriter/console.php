@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 use Ghostwriter\Nixify\Console\Command\LockCommand;
-use Ghostwriter\Nixify\Console\Command\MakeDefaultNixCommand;
-use Ghostwriter\Nixify\Console\Command\MakeFlakeNixCommand;
-use Ghostwriter\Nixify\Console\Command\MakeShellNixCommand;
+use Ghostwriter\Nixify\Console\Command\Make\MakeDefaultNixCommand;
+use Ghostwriter\Nixify\Console\Command\Make\MakeFlakeNixCommand;
+use Ghostwriter\Nixify\Console\Command\Make\MakeShellNixCommand;
 use Ghostwriter\Nixify\Console\Command\UpdateCommand;
 use Symfony\Component\Console\Command\Command;
 
